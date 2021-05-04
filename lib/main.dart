@@ -5,50 +5,56 @@ void main() {
 }
 
 class AppClass extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white12,
-        appBar: AppBar(
-          title: Text(
-            "Portfolio",
-            textDirection: TextDirection.ltr,
+          backgroundColor: Colors.white12,
+          appBar: AppBar(
+            title: Text(
+              "Portfolio",
+              textDirection: TextDirection.ltr,
+            ),
+            backgroundColor: Colors.indigo,
+            centerTitle: true,
           ),
-          backgroundColor: Colors.indigo,
-          centerTitle: true,
-        ),
-        body: SafeArea(
-          child: Column(
+          body: SafeArea(
+              child: Column(
             children: [
-              Row (
+              Row(
                 children: [
                   Container(
-                    child: Image(image: AssetImage('asset/1W-removebg-preview.png')),
+                    child: FittedBox(
+                        child: Image(
+                            image: AssetImage('asset/1W-removebg-preview.png')),
+                        fit: BoxFit.fill),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
+                      border: Border.all(width: .5, color: Colors.white70),
+                      borderRadius: BorderRadius.circular(4),
                       color: Colors.white12,
                     ),
                     //padding: EdgeInsets.all(4),
                     margin: EdgeInsets.only(right: 2),
-                    height: 190,
+                    height: 188,
                     width: 142,
                   ),
                   Column(
                     children: [
                       Container(
-                          child: Text(
-                              "Suleiman Ibrahim",
-                              textDirection: TextDirection.rtl,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white70,
-                              ),
+                        child: Text(
+                          "Suleiman Ibrahim",
+                          textDirection: TextDirection.rtl,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white70,
                           ),
+                        ),
                         decoration: BoxDecoration(
+                          border: Border.all(width: .5, color: Colors.white70),
+                          borderRadius: BorderRadius.circular(4),
                           color: Colors.white12,
                         ),
                         alignment: Alignment.center,
@@ -59,7 +65,7 @@ class AppClass extends StatelessWidget {
                       ),
                       Container(
                         child: Text(
-                              "Mobile and Web developer",
+                          "Mobile and Web developer",
                           textDirection: TextDirection.rtl,
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -69,11 +75,13 @@ class AppClass extends StatelessWidget {
                           ),
                         ),
                         decoration: BoxDecoration(
+                          border: Border.all(width: .5, color: Colors.white70),
+                          borderRadius: BorderRadius.circular(4),
                           color: Colors.white12,
                         ),
                         alignment: Alignment.center,
                         padding: EdgeInsets.all(4),
-                        margin: EdgeInsets.only(bottom: 4),
+                        margin: EdgeInsets.only(bottom: 1),
                         height: 95,
                         width: 210,
                       ),
@@ -84,29 +92,29 @@ class AppClass extends StatelessWidget {
               Container(
                 child: Text(
                   "About \n"
-                      "Eat\nDrink\nCode"
-                      "\n\n\n"
-                      "Skills\n"
-                      "Software Development\n"
-                      "Java\n"
-                      "Flutter\n"
-                      "Public relations",
+                  "Eat\nDrink\nCode"
+                  "\n\n\n"
+                  "Skills\n"
+                  "Software Development\n"
+                  "Java\n"
+                  "Flutter\n"
+                  "Public relations",
                   textAlign: TextAlign.center,
                   textDirection: TextDirection.ltr,
-                 style: TextStyle(
-                   fontWeight: FontWeight.bold,
-                   fontSize: 15,
-                   color: Colors.white70,
-
-                 ),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.white70,
+                  ),
                 ),
                 decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white70, width: .5),
+                  borderRadius: BorderRadius.circular(2),
                   color: Colors.white12,
                 ),
                 padding: EdgeInsets.all(1),
-                margin: EdgeInsets.all(4),
-                height: 200,
-                width: 350,
+                height: 205,
+                width: 358,
                 alignment: Alignment.center,
               ),
               Expanded(
@@ -122,11 +130,12 @@ class AppClass extends StatelessWidget {
                   ),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
+                    border: Border.all(width: .5, color: Colors.white70),
+                    borderRadius: BorderRadius.circular(4),
                     color: Colors.white12,
                   ),
-                  //padding: EdgeInsets.all(4),
-                  margin: EdgeInsets.only(bottom: 1),
                   width: 350,
+                  margin: EdgeInsets.only(top: 1.2),
                 ),
               ),
               Expanded(
@@ -142,7 +151,8 @@ class AppClass extends StatelessWidget {
                         Icons.email_outlined,
                         color: Colors.pink,
                         size: 24.0,
-                        semanticLabel: 'Text to announce in accessibility modes',
+                        semanticLabel:
+                            'Text to announce in accessibility modes',
                       ),
                       Icon(
                         Icons.alternate_email,
@@ -159,9 +169,7 @@ class AppClass extends StatelessWidget {
                 ),
               )
             ],
-          )
-        )
-      ),
+          ))),
     );
   }
 }
