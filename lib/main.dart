@@ -8,168 +8,193 @@ class AppClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.white12,
-          appBar: AppBar(
-            title: Text(
-              "Portfolio",
-              textDirection: TextDirection.ltr,
-            ),
-            backgroundColor: Colors.indigo,
-            centerTitle: true,
+        appBar: AppBar(
+          title: Text(
+            "Suleiman Ibrahim - Portfolio",
+            textDirection: TextDirection.ltr,
           ),
-          body: SafeArea(
-              child: Column(
+          backgroundColor: Colors.indigo,
+          centerTitle: true,
+        ),
+        body: SafeArea(
+          child: Row(
             children: [
-              Row(
-                children: [
-                  Container(
-                    child: FittedBox(
-                        child: Image(
-                            image: AssetImage('asset/1W-removebg-preview.png')),
-                        fit: BoxFit.fill),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      border: Border.all(width: .5, color: Colors.white70),
-                      borderRadius: BorderRadius.circular(4),
-                      color: Colors.white12,
-                    ),
-                    //padding: EdgeInsets.all(4),
-                    margin: EdgeInsets.only(right: 2),
-                    height: 188,
-                    width: 142,
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        child: Text(
-                          "Suleiman Ibrahim",
-                          textDirection: TextDirection.rtl,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: .5, color: Colors.white70),
-                          borderRadius: BorderRadius.circular(4),
-                          color: Colors.white12,
-                        ),
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(4),
-                        margin: EdgeInsets.only(top: 2),
-                        height: 95,
-                        width: 210,
-                      ),
-                      Container(
-                        child: Text(
-                          "Mobile and Web developer",
-                          textDirection: TextDirection.rtl,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white70,
-                          ),
-                        ),
-                        decoration: BoxDecoration(
-                          border: Border.all(width: .5, color: Colors.white70),
-                          borderRadius: BorderRadius.circular(4),
-                          color: Colors.white12,
-                        ),
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(4),
-                        margin: EdgeInsets.only(bottom: 1),
-                        height: 95,
-                        width: 210,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
               Container(
-                child: Text(
-                  "About \n"
-                  "Eat\nDrink\nCode"
-                  "\n\n\n"
-                  "Skills\n"
-                  "Software Development\n"
-                  "Java\n"
-                  "Flutter\n"
-                  "Public relations",
-                  textAlign: TextAlign.center,
-                  textDirection: TextDirection.ltr,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: Colors.white70,
-                  ),
-                ),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white70, width: .5),
-                  borderRadius: BorderRadius.circular(2),
-                  color: Colors.white12,
-                ),
-                padding: EdgeInsets.all(1),
-                height: 205,
-                width: 358,
-                alignment: Alignment.center,
-              ),
-              Expanded(
-                child: Container(
-                  child: Text(
-                    "Contact information",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Colors.white60,
+                width: 120,
+                child: ListView(
+                  children: [
+                    Container(
+                      child: Image(
+                        image: AssetImage('images/head_shot1.jpg'),
+                        fit: BoxFit.fill,
+                        height: 140,
+                      ),
+                      padding: EdgeInsets.all(5),
                     ),
-                  ),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: .5, color: Colors.white70),
-                    borderRadius: BorderRadius.circular(4),
-                    color: Colors.white12,
-                  ),
-                  width: 350,
-                  margin: EdgeInsets.only(top: 1.2),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  width: 350,
-                  decoration: BoxDecoration(
-                    color: Colors.white12,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const <Widget>[
-                      Icon(
-                        Icons.email_outlined,
-                        color: Colors.pink,
-                        size: 24.0,
-                        semanticLabel:
-                            'Text to announce in accessibility modes',
+                    Text(
+                      "Suleiman Ibrahim",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        wordSpacing: .3,
+                        fontFamily: "monospace",
                       ),
-                      Icon(
-                        Icons.alternate_email,
-                        color: Colors.blue,
-                        size: 30.0,
+                      textAlign: TextAlign.center,
+                    ),
+                    Divider(
+                      color: Colors.black,
+                    ),
+                    Text(
+                      "Mobile App Developer",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "fantacy",
                       ),
-                      Icon(
+                      textAlign: TextAlign.center,
+                    ),
+                    Divider(
+                      endIndent: 1,
+                      indent: 1,
+                    ),
+                    Text(
+                      "Contact",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        fontFamily: "cursive",
+                        fontSize: 15,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Divider(),
+                    ListTile(
+                      contentPadding: EdgeInsets.all(3),
+                      leading: Icon(
+                        Icons.email_rounded,
+                        size: 32,
+                      ),
+                      title: Text(
+                        "mymail@mail.com",
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.all(3),
+                      leading: Icon(
+                        Icons.location_on_outlined,
+                        color: Colors.yellow,
+                        size: 32,
+                      ),
+                      title: Text(
+                        "127.00.00.1",
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.all(3),
+                      leading: Icon(
                         Icons.phone,
                         color: Colors.green,
-                        size: 36.0,
+                        size: 32,
                       ),
-                    ],
-                  ),
+                      title: Text(
+                        "+23470123456",
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.all(3),
+                      leading: Icon(
+                        Icons.alternate_email_outlined,
+                        color: Colors.blue,
+                        size: 32,
+                      ),
+                      title: Text(
+                        "princeIbs",
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
+              ),
+              Container(
+                width: 120,
+                child: ListView(
+                  children: [
+                    Container(
+                      height: 120,
+                      child: Text(
+                        "Work History",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "cursive",
+                        ),
+                      ),
+                    ),
+                    Divider(),
+                    Container(
+                      height: 120,
+                      child: Text(
+                        "Education",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "cursive",
+                        ),
+                      ),
+                    ),
+                    Divider(),
+                    Container(
+                      height: 120,
+                      child: Text(
+                        "Certification",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "cursive",
+                        ),
+                      ),
+                    ),
+                    Divider(),
+                    Container(
+                      height: 120,
+                      child: Text(
+                        "Interests",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "cursive",
+                        ),
+                      ),
+                    ),
+                    Divider(),
+                  ],
+                ),
+                alignment: Alignment.center,
+              ),
+              Container(
+                width: 120,
+                child: ListView(
+                  children: [],
+                ),
+                alignment: Alignment.center,
               )
             ],
-          ))),
+          ),
+        ),
+      ),
     );
   }
 }
