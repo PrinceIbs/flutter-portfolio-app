@@ -14,7 +14,6 @@ class AppClass extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "Suleiman Ibrahim - Portfolio",
-            textDirection: TextDirection.ltr,
           ),
           backgroundColor: Colors.indigo,
           centerTitle: true,
